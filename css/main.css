@@ -1,0 +1,71 @@
+@import url("https://fonts.googleapis.com/css?family=Hepta+Slab&display=swap");
+:root {
+  --text-color: rgba(255, 255, 255);
+}
+p {
+  margin: 0;
+}
+* {
+  box-sizing: border-box;
+  color: var(--text-color);
+  font-family: "Hepta Slab", serif;
+}
+body {
+  margin: 0;
+  padding: 0;
+}
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100px;
+  background-color: purple;
+  margin: 0;
+  padding: 0 30px 0 30px;
+}
+/* header nav {
+  display: flex;
+  justify-content: space-around;
+} */
+header nav a {
+  padding: 1em;
+  margin: auto;
+  background-color: rgb(112, 4, 112, 0.9);
+  color: var(--text-color);
+  text-decoration: none;
+}
+body main {
+  display: flex;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  justify-content: space-around;
+}
+body main .section {
+  background-color: gainsboro;
+  width: 36%;
+  height: auto;
+}
+body main .section1 {
+  width: 60%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+.each-grid {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 2px 2px 5px rgb(255, 255, 255);
+  width: 30%;
+  background-color: rgb(112, 4, 112, 0.9);
+  margin-top: 10px;
+  margin-bottom: 10px;
+  line-height: 1.5;
+  height: 110px;
+}
+
+footer {
+  background-color: black;
+  height: 100px;
+}
