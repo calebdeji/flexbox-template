@@ -23,10 +23,9 @@ header {
   margin: 0;
   padding: 0 30px 0 30px;
 }
-/* header nav {
-  display: flex;
-  justify-content: space-around;
-} */
+header .icon-bar {
+  display: none;
+}
 header nav a {
   padding: 1em;
   margin: auto;
@@ -39,6 +38,7 @@ body main {
   margin-top: 1em;
   margin-bottom: 1em;
   justify-content: space-around;
+  flex-wrap: wrap;
 }
 body main .section {
   background-color: gainsboro;
@@ -68,4 +68,97 @@ body main .section1 {
 footer {
   background-color: black;
   height: 100px;
+}
+
+@media screen and (max-width: 800px) {
+  body main .section1 {
+    width: 100%;
+    justify-content: space-around;
+  }
+  .each-grid {
+    width: 40%;
+  }
+  body main .section2 {
+    margin-top: 1em;
+    height: 300px;
+    width: 100%;
+  }
+}
+@media screen and (max-width: 600px) {
+  header .icon-bar {
+    display: block;
+  }
+
+  header {
+    padding-left: 0;
+  }
+  header h3 {
+    padding-left: 30px;
+  }
+  header nav {
+    display: none;
+    position: absolute;
+    top: 100px;
+    /* display: flex; */
+    flex-direction: column;
+    width: 100%;
+  }
+  header nav a {
+    width: 100%;
+    padding-right: 30px;
+  }
+  .animate-right-custom {
+    /* position: relative; */
+    -webkit-animation: animaterightcustom 0.9s;
+    animation: animaterightcustom 0.9s;
+  }
+  @-webkit-keyframes animaterightcustom {
+    from {
+      right: 100%;
+      opacity: 0;
+    }
+    to {
+      right: 0;
+      opacity: 1;
+    }
+  }
+  @keyframes animaterightcustom {
+    from {
+      right: 100%;
+      opacity: 0;
+    }
+    to {
+      right: 0;
+      opacity: 1;
+    }
+  }
+  .animate-right-close {
+    -webkit-animation: animaterightclose 0.9s;
+    animation: animaterightclose 0.9s;
+  }
+  @-webkit-keyframes animaterightclose {
+    from {
+      right: 0;
+      opacity: 1;
+    }
+    to {
+      right: -100%;
+      opacity: 0;
+    }
+  }
+  @keyframes animaterightclose {
+    from {
+      right: 0px;
+      opacity: 1;
+    }
+    to {
+      right: -100%;
+      opacity: 0;
+    }
+  }
+}
+@media screen and (max-width: 500px) {
+  .each-grid {
+    width: 80%;
+  }
 }
